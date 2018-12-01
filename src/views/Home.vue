@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-           
+
             <v-content>
                 <section>
                     <v-parallax :src="require('@/assets/hero.jpeg')" height="600">
@@ -32,14 +32,16 @@
                             class="my-5"
                             align-center
                     >
-                        <v-flex xs12 sm4 class="my-3">
-                            <div class="text-xs-center">
-                                <h2 class="headline">The best way to start developing</h2>
-                                <span class="subheading">
-                Cras facilisis mi vitae nunc
-              </span>
-                            </div>
+                        <v-flex xs12 sm6 md6 class="my-3">
+                            <h2 class="headline">HIV Testing Kit</h2>
+                            <span class="subheading">Get a free HIV Testing Kit today! </span>
+                            <p>When you complete the quiz, you can get a free HIV testing kit delivered to your house or at any of our vending machine at convenient locations around Australia!</p>
                         </v-flex>
+                        <v-flex xs12 sm6 md6 class="my-3">
+                            
+
+                        </v-flex>
+
                         <v-flex xs12>
                             <v-container grid-list-xl>
                                 <v-layout row wrap align-center>

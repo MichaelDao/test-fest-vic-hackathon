@@ -11,8 +11,10 @@
                 <router-link to="/"><img src="@/assets/logo.png"/></router-link>
                 <v-spacer></v-spacer>
                 <v-toolbar-items>
-                    <v-btn flat to="/">Home</v-btn>
-                    <v-btn flat to="/about">About</v-btn>
+                    <v-btn flat to="/"><v-icon>mdi-house</v-icon>Home</v-btn>
+                    <v-btn flat to="/about">Why</v-btn>
+                    <v-btn flat to="/quiz">Quiz</v-btn>
+                    <v-btn flat to="/shop">Shop</v-btn>
                 </v-toolbar-items>
             </v-toolbar>
 

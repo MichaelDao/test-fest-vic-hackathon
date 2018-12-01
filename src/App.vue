@@ -1,28 +1,64 @@
 <template>
- <v-app>
-   <v-navigation-drawer app>hi</v-navigation-drawer>
-   <v-toolbar app>hello</v-toolbar>
-   <v-content>
-     <v-container fluid>
-       <router-view>pep</router-view>
-     </v-container>
-   </v-content>
-   <v-footer app>noh</v-footer>
- </v-app>
+    <div id="app">
+        <v-app light>
+            <!--<head>-->
+                <!--<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons'-->
+                      <!--rel="stylesheet">-->
+            <!--</head>-->
+
+            <v-toolbar>
+                <v-toolbar-side-icon></v-toolbar-side-icon>
+                <router-link to="/"><img src="@/assets/logo.png"/></router-link>
+                <v-spacer></v-spacer>
+                <v-toolbar-items>
+                    <v-btn flat to="/">Home</v-btn>
+                    <v-btn flat to="/about">About</v-btn>
+                </v-toolbar-items>
+            </v-toolbar>
+
+            <router-view/>
+        </v-app>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+    import Vue from 'vue';
+    import Vuetify from 'vuetify';
+    import 'vuetify/dist/vuetify.min.css'; // Ensure you are using css-loader
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  },
-  data () {
-    return {
-      //
+    Vue.use(Vuetify);
+
+    export default {
+        name: 'App',
+        components: {},
+        data() {
+            return {
+                //
+            }
+        }
     }
-  }
-}
+
 </script>
+
+<style lang="scss">
+    #app {
+        font-family: "Avenir", Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+    }
+
+    #nav {
+        padding: 30px;
+
+        a {
+            font-weight: bold;
+            color: #2c3e50;
+
+            &.router-link-exact-active {
+                color: #42b983;
+            }
+        }
+    }
+</style>

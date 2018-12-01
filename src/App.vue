@@ -12,6 +12,7 @@
                 <v-spacer></v-spacer>
                 <v-toolbar-items>
                     <v-btn flat to="/">Home</v-btn>
+                    <v-btn flat to="/shop">Shop</v-btn>
                     <v-btn flat to="/about">About</v-btn>
                 </v-toolbar-items>
             </v-toolbar>

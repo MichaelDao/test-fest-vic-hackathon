@@ -16,6 +16,20 @@
       </section>
     </v-content>
 
+    <v-card-text>
+      <v-container fluid>
+        <v-layout row wrap>
+          <v-flex xs12 sm6 md6>
+            <v-radio-group v-model="ex7" column>
+              <v-radio label="red" color="red" value="red"></v-radio>
+              <v-radio label="indigo" color="indigo" value="indigo"></v-radio>
+              <v-radio label="orange" color="orange" value="orange"></v-radio>
+            </v-radio-group>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-card-text>
+
     <div class="row">
       <div class="large-12 columns">
         <h1>{{ quiz.title }}</h1>
@@ -25,10 +39,12 @@
             <!-- Hide all questions, show only the one with index === to current question index -->
             <div v-show="index === questionIndex">
               <h3>{{ question.text }}</h3>
+
               <ol>
                 <!-- for each response of the current question -->
                 <li v-for="(response, index) in question.responses" :key="index">
                   <label>
+                   
                     <input
                       type="radio"
                       v-bind:value="response.value"
@@ -39,10 +55,18 @@
                   </label>
                 </li>
               </ol>
+
               <!-- The two navigation buttons -->
               <!-- Note: prev is hidden on first question -->
-              <button class="secondary button" v-if="questionIndex > 0" v-on:click="prev">prev</button>
-              <button class="success button" v-on:click="next">next</button>
+              <v-btn
+                class="blue lighten-2 mt-5"
+                dark
+                large
+                v-if="questionIndex > 0"
+                v-on:click="prev"
+              >prev</v-btn>
+
+              <v-btn class="blue lighten-2 mt-5" dark v-on:click="next">next</v-btn>
             </div>
           </div>
 
@@ -63,8 +87,6 @@ import "vuetify/dist/vuetify.min.css"; // Ensure you are using css-loader
 export default {
   name: "home",
   //components: {}
-
-  //el: "#app",
   data() {
     return {
       quiz: {},
@@ -110,15 +132,15 @@ export default {
           responses: [
             {
               text: "I am not sure",
-              value: "Unsure"
+              value: "Medium Risk"
             },
             {
               text: "Negative",
-              value: "Negative"
+              value: "Low Risk"
             },
             {
               text: "Positive",
-              value: "Positive"
+              value: "High Risk"
             }
           ]
         },
@@ -127,15 +149,15 @@ export default {
           responses: [
             {
               text: "I am not sure",
-              value: "Unsure"
+              value: "Medium Risk"
             },
             {
               text: "Negative",
-              value: "Negative"
+              value: "Low Risk"
             },
             {
               text: "Positive",
-              value: "Positive"
+              value: "High Risk"
             }
           ]
         },
@@ -144,15 +166,15 @@ export default {
           responses: [
             {
               text: "Undetectable",
-              value: "Undetectable"
+              value: "Low Risk"
             },
             {
               text: "Pulling out",
-              value: "Pulling out"
+              value: "High Risk"
             },
             {
               text: "PrEP (Pre-Exposure Prophylaxis)",
-              value: "PrEP"
+              value: "Medium Risk"
             }
           ]
         }

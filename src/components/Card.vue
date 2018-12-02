@@ -2,7 +2,7 @@
     <v-flex xs12 sm6 md4>
         <v-card>
             <v-img
-                    :src="image"
+                    :src="require(image)"
                     height="200px"
             >
             </v-img>

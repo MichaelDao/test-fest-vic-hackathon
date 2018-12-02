@@ -1,37 +1,151 @@
 <template>
     <v-content>
-        <v-container>
-          <div style = "float:right;">
-            <!-- Make this modal-->
-              <img src = "@/assets/shopping_cart_full.png" style="width:30%">
-          </div>
-          <div class = "shop-title">
-            <div>
-              <img src = "@/assets/shoppingbag.jpg" style="width:20%">
-            </div>
-            <h1>One Drop Shop</h1>
-          </div>
-        </v-container>
-        <v-container class = "background-img">
-          <div class ="center-items">
-            <div class="row">
-              <div class ="column">
-                <img src="@/assets/atomo01.jpg" style="width:50%">
-                <img src="@/assets/durex.jpeg" style="width:50%">
-              </div>
-              <div class ="column">
-                <img src="@/assets/femaleCondom.jpg" style="width:50%">
-                <img src="@/assets/condomBundle.jpg" style="width:50%">
-              </div>
-            </div>
-          </div>
+        <v-container fluid>
+            <v-layout row wrap>
+            <v-flex xs12 sm6 md4>
+                <v-card>
+                    <!--image here-->
+                    <v-img
+                            :src="require('@/assets/atomo01.jpg')"
+                            height="200px"
+                    >
+                    </v-img>
+
+                    <v-card-title primary-title>
+                        <div>
+                            Atomo Diagnostics HIV Testing Kit
+                        </div>
+                    </v-card-title>
+
+                    <v-card-text>
+                        $TBA
+                    </v-card-text>
+
+                    <v-card-actions>
+                        <!--<v-btn flat>Share</v-btn>-->
+                        <v-btn style="left:42%" flat color="purple">Buy</v-btn>
+                        <!--<v-spacer></v-spacer>
+                            <v-btn icon @click="show = !show">
+                                <v-icon>{{ show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
+                            </v-btn>-->
+                    </v-card-actions>
+                </v-card>
+            </v-flex>
+                <v-flex xs12 sm6 md4>
+                    <v-card>
+                        <!--image here-->
+                        <v-img
+                                :src="require('@/assets/condomBundle.jpg')"
+                                height="200px"
+                        >
+                        </v-img>
+
+                        <v-card-title primary-title>
+                            <div>
+                                Bundle of Condoms
+
+                            </div>
+                        </v-card-title>
+
+                        <v-card-text>
+                            $7
+
+                        </v-card-text>
+
+                        <v-card-actions>
+                            <!--<v-btn flat>Share</v-btn>-->
+                            <v-btn style="left:42%" flat
+                                   color="purple">Buy</v-btn>
+                            <!--<v-spacer></v-spacer>
+                            <v-btn icon @click="show = !show">
+                                <v-icon>{{ show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
+                            </v-btn>-->
+                        </v-card-actions>
+                    </v-card>
+                </v-flex>
+                <v-flex xs12 sm6 md4>
+                    <v-card>
+                        <!--image here-->
+                        <v-img
+                                :src="require('@/assets/durex.jpeg')"
+                                height="200px"
+                        >
+                        </v-img>
+
+                        <v-card-title primary-title>
+                            <div>
+                                2xPair Durex condoms
+
+                            </div>
+                        </v-card-title>
+
+                        <v-card-text>
+                            $5
+
+                        </v-card-text>
+
+                        <v-card-actions>
+                            <!--<v-btn flat>Share</v-btn>-->
+                            <v-btn to="./BuyModel" style="left:42%" flat
+                                   color="purple">Buy
+                            </v-btn>
+                            <!--<v-spacer></v-spacer>
+                            <v-btn icon @click="show = !show">
+                                <v-icon>{{ show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
+                            </v-btn>-->
+                        </v-card-actions>
+                    </v-card>
+                </v-flex>
+                <v-flex xs12 sm6 md4>
+                    <v-card>
+                        <!--image here-->
+                        <v-img
+                                :src="require('@/assets/femaleCondom.jpg')"
+                                height="200px"
+                        >
+                        </v-img>
+
+                        <v-card-title primary-title>
+                            <div>
+                                Female Condom
+
+                            </div>
+                        </v-card-title>
+
+                        <v-card-text>
+                           $18.50
+
+                        </v-card-text>
+
+                        <v-card-actions>
+                            <!--<v-btn flat>Share</v-btn>-->
+                            <v-btn style="left:42%" flat color="purple">Buy
+                            </v-btn>
+                            <!--<v-spacer></v-spacer>
+                            <v-btn icon @click="show = !show">
+                                <v-icon>{{ show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
+                            </v-btn>-->
+                        </v-card-actions>
+                    </v-card>
+                </v-flex>
+
+                    <v-btn fixed bottom right fab dark small color="primary">
+                        <v-icon>add_shopping_cart</v-icon>
+                    </v-btn>
+
+            </v-layout>
         </v-container>
     </v-content>
 </template>
 
 <script>
+
+
     export default {
-        name: "Shop"
+        name: "Shop",
+        components: {
+
+        }
     }
 </script>
 
@@ -39,6 +153,7 @@
     * {
         box-sizing: border-box;
     }
+
 
     body,template {
         height:100%;

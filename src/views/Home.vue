@@ -242,7 +242,7 @@ import L from 'leaflet';
     }
 
     #map{
-        height:300px;
-        width: 500px;
+        height: 600px;
+        width: 1000px;
     }
 </style>

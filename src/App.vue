@@ -45,7 +45,7 @@
                     <v-flex xs12>
                         <div class="white--text ml-3">
                             Made with
-                            <v-icon class="red--text">mdi-cards-heart</v-icon>
+                            <v-icon class="red--text">whatshot</v-icon>
                             by <a class="white--text" href="https://vuetifyjs.com" target="_blank">OneDrop</a>
                         </div>
                     </v-flex>

@@ -129,7 +129,7 @@
                     </v-card>
                 </v-flex>
 
-                    <v-btn fixed bottom right fab dark small color="primary">
+                    <v-btn to="/cart" fixed bottom right fab dark small color="primary">
                         <v-icon>add_shopping_cart</v-icon>
                     </v-btn>
 

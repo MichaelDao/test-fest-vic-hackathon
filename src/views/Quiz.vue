@@ -1,5 +1,21 @@
 <template>
   <div id="app" v-cloak>
+    <v-content>
+      <section>
+        <v-parallax :src="require('@/assets/dark.jpg')" height="600">
+          <v-layout column align-center justify-center class="white--text">
+            <h1 class="white--text mb-2 display-1 text-xs-center">HIV RISK CALCULATOR</h1>
+
+            <div
+              class="subheading mb-3 text-xs-center"
+            >Use this calculator to find out the risk associated to scenarios based on anal sex and where condoms are not being used.</div>
+
+            <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes">How safe are you?</v-btn>
+          </v-layout>
+        </v-parallax>
+      </section>
+    </v-content>
+
     <div class="row">
       <div class="large-12 columns">
         <h1>{{ quiz.title }}</h1>
@@ -39,23 +55,6 @@
       </div>
     </div>
   </div>
-
-  <!--
-  <div class="home">
-    <v-content>
-      <section>
-        <v-parallax :src="require('@/assets/dark.jpg')" height="600">
-          <v-layout column align-center justify-center class="white--text">
-            <h1 class="white--text mb-2 display-1 text-xs-center">How much are you at risk to HIV?</h1>
-            <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes">Let us find out</v-btn>
-          </v-layout>
-        </v-parallax>
-      </section>
-
-
-      
-    </v-content>
-  </div>-->
 </template>
 
 <script>
@@ -100,95 +99,60 @@ export default {
       return maxEl;
     }
   },
-  
+
   created: function() {
-    console.log("yeet");
     this.quiz = {
-      title: "What superhero are you?",
+      title: "Risk Calculator",
 
       questions: [
         {
-          text: "How would you describe your personality?",
+          text: "Your HIV status?",
           responses: [
             {
-              text: "Im serious and dark",
-              value: "Batman"
+              text: "I am not sure",
+              value: "Unsure"
             },
             {
-              text: "Arrogant, but charming",
-              value: "Superman"
+              text: "Negative",
+              value: "Negative"
             },
             {
-              text: "Fun and easy going",
-              value: "The Flash"
+              text: "Positive",
+              value: "Positive"
             }
           ]
         },
         {
-          text: "Why did you want to become a superhero?",
+          text: "Your partners HIV status?",
           responses: [
             {
-              text: "For the thrills",
-              value: "The Flash"
+              text: "I am not sure",
+              value: "Unsure"
             },
             {
-              text: "For justice",
-              value: "Batman"
+              text: "Negative",
+              value: "Negative"
             },
             {
-              text: "For popularity",
-              value: "Superman"
+              text: "Positive",
+              value: "Positive"
             }
           ]
         },
         {
-          text: "Who would you most hang around with?",
+          text: "What are the ways you are reducing the risk?",
           responses: [
             {
-              text: "Wonder Woman",
-              value: "Superman"
+              text: "Undetectable",
+              value: "Undetectable"
             },
             {
-              text: "Green Arrow",
-              value: "The Flash"
+              text: "Pulling out",
+              value: "Pulling out"
             },
             {
-              text: "Robin",
-              value: "Batman"
-            }
-          ]
-        },
-        {
-          text: "What's your favourite colour?",
-          responses: [
-            {
-              text: "Black",
-              value: "Batman"
-            },
-            {
-              text: "Red",
-              value: "The Flash"
-            },
-            {
-              text: "Blue",
-              value: "Superman"
-            }
-          ]
-        },
-        {
-          text: "When do you help people?",
-          responses: [
-            {
-              text: "Every chance I can",
-              value: "The Flash"
-            },
-            {
-              text: "At night",
-              value: "Batman"
-            },
-            {
-              text: "When they need me to",
-              value: "Superman"
+              text: "PrEP (Pre-Exposure Prophylaxis)",
+              value: "PrEP"
             }
           ]
         }
@@ -196,45 +160,6 @@ export default {
     };
   }
 };
-
-//("use strict");
-
-//   var app = new Vue({
-//     el: "#app",
-//     data: {
-//       quiz: quiz,
-//       questionIndex: 0,
-//       userResponses: Array()
-//     },
-//     methods: {
-//       // Go to next question
-//       next: function() {
-//         this.questionIndex++;
-//         console.log(this.userResponses);
-//       },
-//       // Go to previous question
-//       prev: function() {
-//         this.questionIndex--;
-//       },
-//       score: function() {
-//         //find the highest occurence in responses
-//         var modeMap = {};
-//         var maxEl = this.userResponses[0],
-//           maxCount = 1;
-//         for (var i = 0; i < this.userResponses.length; i++) {
-//           var el = this.userResponses[i];
-//           if (modeMap[el] == null) modeMap[el] = 1;
-//           else modeMap[el]++;
-//           if (modeMap[el] > maxCount) {
-//             maxEl = el;
-//             maxCount = modeMap[el];
-//           }
-//         }
-//         return maxEl;
-//       }
-//     }
-//   });
-// };
 </script>
 
 <style scoped>

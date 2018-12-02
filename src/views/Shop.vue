@@ -128,6 +128,11 @@
                         </v-card-actions>
                     </v-card>
                 </v-flex>
+
+                    <v-btn fixed bottom right fab dark small color="primary">
+                        <v-icon>add_shopping_cart</v-icon>
+                    </v-btn>
+
             </v-layout>
         </v-container>
     </v-content>
@@ -148,6 +153,7 @@
     * {
         box-sizing: border-box;
     }
+
 
     body,template {
         height:100%;

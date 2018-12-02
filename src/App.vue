@@ -23,9 +23,9 @@
                     <v-btn flat to="/">
                         <v-icon>home</v-icon>
                     </v-btn>
-                    <v-btn flat to="/about">
-                        <v-icon>account_box</v-icon>
-                    </v-btn>
+                    <!--<v-btn flat to="/about">-->
+                        <!--<v-icon>account_box</v-icon>-->
+                    <!--</v-btn>-->
                     <v-btn flat to="/quiz">
                         <v-icon>question_answer</v-icon>
                     </v-btn>
